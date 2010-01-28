@@ -1,0 +1,31 @@
+<h1>WHEREStheFUCKINGsun?</h1>
+
+<p>Lets face it, the reason you're sat infront of your googlebox, looking here, is because the weather is shite?
+So lets find some fucking sun!!!
+</p>
+
+<p>A table I will fucking delete at somepoint, is below. Unless I find a use for it. Maybe its gone already?
+</p>
+
+<table>
+  <tr>
+    <th>Place</th>
+  </tr>
+
+<% @locations.each do |location| %>
+  <tr>
+    <td><%=h location.place %></td>
+    <td><%= link_to 'Show', location %></td>
+    <td><%= link_to 'Edit', edit_location_path(location) %></td>
+    <td><%= link_to 'Destroy', location, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+RIGHT, hit this fucking link, and we'll search time and space to find you some fucking sun
+<br />
+<%= link_to 'Permission to swear lots. IT IS BIG and CLEVER. THEY LIED', new_location_path %>
+<p>
+	I MAY PUT A RAIN CLOUD AND AN ADVERT ON THIS PAGE
+</p>

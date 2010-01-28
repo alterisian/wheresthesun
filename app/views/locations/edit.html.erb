@@ -1,0 +1,22 @@
+<h1>Yeah I really should delete this fucking screen, before you bastards fill it with spam</h1>
+
+<h1>Editing location</h1>
+
+<% form_for(@location) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :place %><br />
+    <%= f.text_field :place %>
+  </p>
+  <p>
+    <%= f.submit 'Amuse Ian' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @location %> |
+<%= link_to 'Back', locations_path %>
+
+<p>
+	REMEMBER NOW KIDS. Release early. Release now. Get me beer. Iterate. Get me more beer. Release Often. Easy :)
+</p>
