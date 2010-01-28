@@ -1,0 +1,302 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (156.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (109.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateLocations (20100127234404)
+  [4;36;1mSQL (15.0ms)[0m   [0;1mCREATE TABLE "locations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "place" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100127234404')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("locations")[0m
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-01-27 23:47:26) [GET]
+  [4;36;1mLocation Load (15.0ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 6172ms (View: 6094, DB: 15) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#new (for 127.0.0.1 at 2010-01-27 23:47:44) [GET]
+Rendering template within layouts/locations
+Rendering locations/new
+Completed in 204ms (View: 125, DB: 0) | 200 OK [http://localhost/locations/new]
+
+
+Processing LocationsController#new (for 127.0.0.1 at 2010-01-27 23:52:17) [GET]
+Rendering template within layouts/locations
+Rendering locations/new
+Completed in 125ms (View: 46, DB: 0) | 200 OK [http://localhost/locations/new]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-01-27 23:52:21) [GET]
+  [4;35;1mLocation Load (0.0ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 94ms (View: 16, DB: 0) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-01-27 23:52:30) [GET]
+  [4;36;1mLocation Load (15.0ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 156ms (View: 94, DB: 15) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#new (for 127.0.0.1 at 2010-01-27 23:53:25) [GET]
+Rendering template within layouts/locations
+Rendering locations/new
+Completed in 141ms (View: 62, DB: 0) | 200 OK [http://localhost/locations/new]
+
+
+Processing LocationsController#new (for 127.0.0.1 at 2010-01-27 23:56:35) [GET]
+Rendering template within layouts/locations
+Rendering locations/new
+Completed in 187ms (View: 109, DB: 0) | 200 OK [http://localhost/locations/new]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-01-27 23:58:06) [GET]
+  [4;35;1mLocation Load (0.0ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 140ms (View: 62, DB: 0) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#new (for 127.0.0.1 at 2010-01-27 23:58:18) [GET]
+Rendering template within layouts/locations
+Rendering locations/new
+Completed in 125ms (View: 47, DB: 0) | 200 OK [http://localhost/locations/new]
+
+
+Processing LocationsController#create (for 127.0.0.1 at 2010-01-27 23:58:25) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"dFvIiU1TXA+P7UxwqFMPjkO9ToslbbbMcD2PgdToE24=", "location"=>{"place"=>"here"}}
+  [4;36;1mLocation Create (31.0ms)[0m   [0;1mINSERT INTO "locations" ("place", "updated_at", "created_at") VALUES('here', '2010-01-27 23:58:25', '2010-01-27 23:58:25')[0m
+Redirected to http://localhost:3000/locations/1
+Completed in 719ms (DB: 31) | 302 Found [http://localhost/locations]
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-01-27 23:58:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mLocation Load (0.0ms)[0m   [0mSELECT * FROM "locations" WHERE ("locations"."id" = 1) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Completed in 250ms (View: 110, DB: 0) | 200 OK [http://localhost/locations/1]
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-01-28 00:03:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mLocation Load (0.0ms)[0m   [0;1mSELECT * FROM "locations" WHERE ("locations"."id" = 1) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Completed in 156ms (View: 46, DB: 0) | 200 OK [http://localhost/locations/1]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-01-28 00:03:29) [GET]
+  [4;35;1mLocation Load (0.0ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 141ms (View: 63, DB: 0) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-01-28 00:03:32) [GET]
+  [4;36;1mLocation Load (0.0ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 156ms (View: 78, DB: 0) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-01-28 00:03:34) [GET]
+  [4;35;1mLocation Load (0.0ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 140ms (View: 62, DB: 0) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#new (for 127.0.0.1 at 2010-01-28 00:03:40) [GET]
+Rendering template within layouts/locations
+Rendering locations/new
+Completed in 172ms (View: 110, DB: 0) | 200 OK [http://localhost/locations/new]
+
+
+Processing LocationsController#new (for 127.0.0.1 at 2010-01-28 00:04:30) [GET]
+Rendering template within layouts/locations
+Rendering locations/new
+Completed in 204ms (View: 94, DB: 0) | 200 OK [http://localhost/locations/new]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-01-28 00:04:40) [GET]
+  [4;36;1mLocation Load (0.0ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 141ms (View: 63, DB: 0) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-01-28 00:04:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mLocation Load (0.0ms)[0m   [0mSELECT * FROM "locations" WHERE ("locations"."id" = 1) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Completed in 141ms (View: 47, DB: 0) | 200 OK [http://localhost/locations/1]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-01-28 00:04:46) [GET]
+  [4;36;1mLocation Load (15.0ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 172ms (View: 94, DB: 15) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#edit (for 127.0.0.1 at 2010-01-28 00:04:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mLocation Load (0.0ms)[0m   [0mSELECT * FROM "locations" WHERE ("locations"."id" = 1) [0m
+Rendering template within layouts/locations
+Rendering locations/edit
+Completed in 172ms (View: 110, DB: 0) | 200 OK [http://localhost/locations/1/edit]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-01-28 00:05:00) [GET]
+  [4;36;1mLocation Load (16.0ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 187ms (View: 78, DB: 16) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#new (for 127.0.0.1 at 2010-01-28 00:05:16) [GET]
+Rendering template within layouts/locations
+Rendering locations/new
+Completed in 187ms (View: 93, DB: 0) | 200 OK [http://localhost/locations/new]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-01-28 00:06:33) [GET]
+  [4;35;1mLocation Load (0.0ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 156ms (View: 78, DB: 0) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-01-28 00:08:38) [GET]
+  [4;36;1mLocation Load (0.0ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 188ms (View: 110, DB: 0) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-01-28 00:08:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mLocation Load (0.0ms)[0m   [0mSELECT * FROM "locations" WHERE ("locations"."id" = 1) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Completed in 718ms (View: 625, DB: 0) | 200 OK [http://localhost/locations/1]
+
+
+Processing LocationsController#edit (for 127.0.0.1 at 2010-01-28 00:08:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mLocation Load (0.0ms)[0m   [0;1mSELECT * FROM "locations" WHERE ("locations"."id" = 1) [0m
+Rendering template within layouts/locations
+Rendering locations/edit
+Completed in 141ms (View: 63, DB: 0) | 200 OK [http://localhost/locations/1/edit]
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-01-28 00:13:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mLocation Load (0.0ms)[0m   [0mSELECT * FROM "locations" WHERE ("locations"."id" = 1) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Completed in 140ms (View: 62, DB: 0) | 200 OK [http://localhost/locations/1]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-01-28 00:13:11) [GET]
+  [4;36;1mLocation Load (0.0ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 125ms (View: 63, DB: 0) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#edit (for 127.0.0.1 at 2010-01-28 00:13:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mLocation Load (0.0ms)[0m   [0mSELECT * FROM "locations" WHERE ("locations"."id" = 1) [0m
+Rendering template within layouts/locations
+Rendering locations/edit
+Completed in 171ms (View: 93, DB: 0) | 200 OK [http://localhost/locations/1/edit]
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-01-28 00:13:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mLocation Load (15.0ms)[0m   [0;1mSELECT * FROM "locations" WHERE ("locations"."id" = 1) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Completed in 141ms (View: 47, DB: 15) | 200 OK [http://localhost/locations/1]
+
+
+Processing LocationsController#edit (for 127.0.0.1 at 2010-01-28 00:13:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mLocation Load (16.0ms)[0m   [0mSELECT * FROM "locations" WHERE ("locations"."id" = 1) [0m
+Rendering template within layouts/locations
+Rendering locations/edit
+Completed in 140ms (View: 62, DB: 16) | 200 OK [http://localhost/locations/1/edit]
+
+
+Processing LocationsController#update (for 127.0.0.1 at 2010-01-28 00:13:32) [PUT]
+  Parameters: {"commit"=>"Amuse Ian", "authenticity_token"=>"dFvIiU1TXA+P7UxwqFMPjkO9ToslbbbMcD2PgdToE24=", "id"=>"1", "location"=>{"place"=>"here"}}
+  [4;36;1mLocation Load (0.0ms)[0m   [0;1mSELECT * FROM "locations" WHERE ("locations"."id" = 1) [0m
+Redirected to http://localhost:3000/locations/1
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/locations/1]
+
+
+Processing LocationsController#show (for 127.0.0.1 at 2010-01-28 00:13:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mLocation Load (0.0ms)[0m   [0mSELECT * FROM "locations" WHERE ("locations"."id" = 1) [0m
+Rendering template within layouts/locations
+Rendering locations/show
+Completed in 156ms (View: 31, DB: 0) | 200 OK [http://localhost/locations/1]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-01-28 00:13:35) [GET]
+  [4;36;1mLocation Load (0.0ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 157ms (View: 62, DB: 0) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#new (for 127.0.0.1 at 2010-01-28 00:13:40) [GET]
+Rendering template within layouts/locations
+Rendering locations/new
+Completed in 171ms (View: 93, DB: 0) | 200 OK [http://localhost/locations/new]
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-01-28 00:26:04) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 610ms (View: 78, DB: 16) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-01-28 00:26:25) [GET]
+  [4;36;1mLocation Load (0.0ms)[0m   [0;1mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 766ms (View: 687, DB: 0) | 200 OK [http://localhost/locations]
+
+
+Processing LocationsController#index (for 127.0.0.1 at 2010-01-28 00:27:02) [GET]
+  [4;35;1mLocation Load (16.0ms)[0m   [0mSELECT * FROM "locations" [0m
+Rendering template within layouts/locations
+Rendering locations/index
+Completed in 140ms (View: 62, DB: 16) | 200 OK [http://localhost/]
